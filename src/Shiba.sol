@@ -7,7 +7,7 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 contract Shiba is ERC20, Ownable {
     constructor() ERC20("SHIBA", "SHIB") Ownable(msg.sender) {}
 
-    function mint(address _to, uint _amount) public onlyOwner {
+    function mint(address _to, uint256 _amount) public onlyOwner {
         _mint(_to, _amount);
     }
 }
